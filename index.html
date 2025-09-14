@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <h4>Salvador Zumstein</h4>
+        <ul class="nav-links">
+            <li><a href="#nosotros">SOBRE MÍ</a></li>
+            <li><a href="#portafolio">PORTFOLIO</a></li>
+            <li><a href="#contacto">CONTACTO</a></li>
+        </ul>
+
+        <!-- Ícono hamburguesa para móvil -->
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+
+    <!-- Overlay menú móvil -->
+    <div class="overlay" id="mobileMenu">
+        <span class="close-btn" id="closeBtn">&times;</span>
+        <a href="#nosotros">SOBRE MÍ</a>
+        <a href="#portafolio">PORTFOLIO</a>
+        <a href="#contacto">CONTACTO</a>
+    </div>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const overlay = document.getElementById('mobileMenu');
+        const closeBtn = document.getElementById('closeBtn');
+
+        hamburger.addEventListener('click', () => {
+            overlay.classList.add('show');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            overlay.classList.remove('show');
+        });
+
+        overlay.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                overlay.classList.remove('show');
+            });
+        }); 
+        // Selecciona todos los enlaces internos del menú
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', e => {
+            e.preventDefault(); // Evita el salto automático
+
+            const targetId = link.getAttribute('href').substring(1); // Quita el #
+            const targetElem = document.getElementById(targetId);
+
+            if (targetElem) {
+                // Scroll suave hasta la posición menos 60px
+                const offset = 60;
+                const topPos = targetElem.getBoundingClientRect().top + window.scrollY - offset;
+
+                window.scrollTo({
+                    top: topPos,
+                    behavior: 'smooth'
+                });
+
+            // Cierra overlay si está abierto (para móvil)
+            if (overlay.classList.contains('show')) {
+                overlay.classList.remove('show');
+            }
+            }
+        });
+    });
+    </script>
+
+
+    <section id="portafolio" class="carrusel">
+      <div class="header">
+        <h1 class="titulo">S <span class="pequeñisimo">Zumstein</span></h1>
+        <div class="decorative-line"></div>
+        <h3><span class="resaltado">Desarrollador web</span></h3>
+      </div>  
+      <div class="carousel-track">
+        <div>
+            <a href="dietetica/public/index.html"><img src="https://picsum.photos/300/200?random=1" alt=""></a>
+            <h4>Vida Natural <span class="pequeño">(pagina de demostración)</span></h4>
+            <div class="decorative-line"></div>
+            <p>A manos de la dietetica "Vida Natural" les presentamos esta pagina innovadora con catalogo incluido, soporte tecnico con IA y mucho más.</p>
+        </div>
+        <div>
+            <a href="gym/index.html"><img src="https://picsum.photos/300/200?random=1" alt=""></a>
+            <h4>PowerGym <span class="pequeño">(pagina de demostración)</span></h4>
+            <div class="decorative-line"></div>
+            <p>El gimnasio "PowerGym" les muestra su pagina que incluye una seccion de imagenes, formulario de contacto y más.</p>
+            </div>
+        <div>
+            <a href="sentioWeb/public/index.html"><img src="https://picsum.photos/300/200?random=1" alt=""></a>
+            <h4>Sentio</h4>
+            <div class="decorative-line"></div>
+            <p>Ademas de un producto innovador, Sentio, presenta su pagina web con todas sus animaciones, y funciones.</p>
+        </div>
+        <!-- Repetimos para que el efecto se vea continuo -->
+       <div>
+            <a href="dietetica/public/index.html"><img src="https://picsum.photos/300/200?random=1" alt=""></a>
+            <h4>Vida Natural <span class="pequeño">(pagina de demostración)</span></h4>
+            <div class="decorative-line"></div>
+            <p>A manos de la dietetica "Vida Natural" les presentamos esta pagina innovadora con catalogo incluido, soporte tecnico con IA y mucho más.</p>
+        </div>
+        <div>
+            <a href="gym/index.html"><img src="https://picsum.photos/300/200?random=1" alt=""></a>
+            <h4>PowerGym <span class="pequeño">(pagina de demostración)</span></h4>
+            <div class="decorative-line"></div>
+            <p>El gimnasio "PowerGym" les muestra su pagina que incluye una seccion de imagenes, formulario de contacto y más.</p>
+            </div>
+        <div>
+            <a href="sentioWeb/public/index.html"><img src="https://picsum.photos/300/200?random=1" alt=""></a>
+            <h4>Sentio</h4>
+            <div class="decorative-line"></div>
+            <p>Ademas de un producto innovador, Sentio, presenta su pagina web con todas sus animaciones, y funciones.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="nosotros" class="nosotros">
+        <h2>Sobre mi</h2>
+        <div class="decorative-line"></div>
+        <div class="info">
+            <p>Soy un desarrollador web apasionado por crear sitios web modernos, responsivos y funcionales. Me especializo en HTML, CSS y JavaScript. Mi objetivo es que cada pagina sea un mundo distinto, y que represente a la marca en su pura expresión.</p>
+            <img src="https://picsum.photos/300/200?random=1" alt="">
+        </div>
+        <div class="listas">
+            <div>
+                <h3>Habilidades</h3>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Git & Github</li>
+                    <li>Diseño UI</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Educación</h3>
+                <ul>
+                    <li>Bachillerato en Informatica (en curso)</li>
+                    <li>Autoformación constante en lenguajes de programación</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contacto">
+        <div class="formulario">
+            <h2>¡Rompe el hielo🧊👇!</h2>
+            <p>Envianos un mail a <a href="mailto:szumstein8@gmail.com" class="resaltado">szumstein8@gmail.com</a> o mensaje al <a href="https://wa.me/5493513998998" class="resaltado">351 399 8998</a> para contactarnos para cualquier consulta y/o trabajo que tengas</p>
+            <form action="https://formsubmit.co/szumstein8@gmail.com" method="POST">
+                <input name="nombre" type="text" placeholder="Nombre Completo" required>
+                <input name="email" type="email" placeholder="Mail" required>
+                <textarea name="mensaje" placeholder="Mensaje" id="mensaje" required></textarea>
+                <button type="submit">Enviar a szumstein8@gmail.com</button>
+            </form> 
+        </div>
+    </section>
+
+    <footer style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
+        <p style="margin-bottom: -10px;">© 2025 - Diseñado con 🤍</p>
+        <p>Contacto: <a href="mailto:szumstein8@gmail.com">szumstein8@gmail.com</a></p>
+    </footer>
+</body>
+</html>

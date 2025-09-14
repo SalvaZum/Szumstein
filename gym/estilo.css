@@ -1,0 +1,248 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #ffffff;
+      color: #000000;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    nav {
+      background-color: rgba(255, 255, 255, 0.4);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      outline: #000000 1px solid;
+      padding: 10px;
+    }
+
+    nav h2 {
+      color: #ff7e00;
+      font-size: 1.5rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      height: 40px
+    }
+
+    nav ul li{
+      font-weight: 600;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      outline: #000000 1px solid;
+      padding: 20px;
+    }
+
+    nav ul li a {
+      color: #a75300;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ff7e00;;
+    }
+
+    header {
+      background: 
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+        url(https://img.huffingtonpost.es/files/og_thumbnail/uploads/2023/04/03/gimnasio-lleno-de-gente.jpeg);
+      height: 100vh;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 2rem;
+    }
+
+    header h1 {
+      font-size: 4rem;
+      background: linear-gradient(90deg, #ff0057, #ff7e00);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ff0057; }
+      to { text-shadow: 0 0 25px #ff7e00; }
+    }
+
+    .btn {
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      background: linear-gradient(90deg, #ff0057, #ff7e00);
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      color: white;
+      transition: transform 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+      transition-duration: 1s;
+      background: linear-gradient(90deg, #ff7e00, #ff0057);
+    }
+
+    .gallery {
+      display: flex;
+      width: 100%;
+      overflow: hidden;
+      margin-top: 3rem;
+    }
+
+    .gallery img {
+      width: 33.33%;
+      height: 400px;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.1);
+      z-index: 2;
+    }
+
+    footer {
+      background: #111;
+      padding: 2rem;
+      text-align: center;
+      color: #888;
+    }
+
+    footer a {
+      color: #ff7e00;
+      text-decoration: none;
+    }
+
+    section{
+        margin-top: 50px;
+    }
+
+    .planes{
+      display: flex;
+    }
+
+    .planes div{
+      margin: 10px;
+    }
+
+    .info{
+      width: 60%;
+      padding: 20px;
+    }
+
+    div a{
+      background-color: rgba(255, 228, 179, 0.836);
+      border-radius: 100%;
+
+      color: #ff7e00;
+      font-size: 30px;
+      margin: 10px;
+    }
+
+    i{
+      width: 40px;
+      height: auto;
+    }
+
+    div a:hover{
+      background-color: #ffbad1;
+      color: #ff0057;
+    }
+
+    .carta {
+      width: 40%;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      
+      border: 5px solid transparent;
+      border-radius: 15px;
+
+      /* El degradado lo ponemos como fondo */
+      background: 
+        linear-gradient(rgb(255, 246, 236), white) padding-box, /* Fondo interno */
+        linear-gradient(270deg, #ff7e00, #ff0057) border-box; /* Degradado en el borde */
+      background-size: 300% 300%;
+      animation: moverDegrade 3s linear infinite;
+
+      box-shadow: 
+        0 0 10px #ff0057,
+        0 0 20px #ff7e00;
+    }
+
+    /* Animación del degradado */
+    @keyframes moverDegrade {
+      0% { background-position: 10% 50%; }
+      100% { background-position: 200% 50%; }
+    }
+
+    .carta p{
+      font-size: 14px;
+    }
+
+    form{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    input, textarea{
+      background-color: transparent;
+      width: 80%;
+      margin: 10px;
+      border-radius: 10px;
+      border: 1px solid rgb(199, 170, 143);
+      padding: 8px;
+    }
+
+    .decorative-line{
+      width: 50%;
+      height: 3px;
+      border-radius: 20px;
+      background-color: #ff7e00;
+    }
+    
+    @media(max-width: 768px){
+      .planes{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .info{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .carta{
+        width: 95%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
