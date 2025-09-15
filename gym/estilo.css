@@ -13,7 +13,7 @@
     }
 
     nav {
-      background-color: rgba(255, 255, 255, 0.4);
+      background-color: rgb(255, 255, 255);
       position: fixed;
       top: 0;
       left: 0;
@@ -47,13 +47,13 @@
     }
 
     nav ul li a {
-      color: #a75300;
+      color:  #ff7e00;
       text-decoration: none;
       transition: color 0.3s;
     }
 
     nav ul li a:hover {
-      color: #ff7e00;;
+      color: #ff0057;
     }
 
     header {
