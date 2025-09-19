@@ -17,7 +17,7 @@ sendBtn.addEventListener("click", async () => {
   chatBox.appendChild(thinkingMsg);
 
   try {
-    const res = await fetch("/api/ask", {
+    const res = await fetch(`${window.location.origin}/api/ask`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ question: userInput })
@@ -97,7 +97,7 @@ function waitImagesLoaded(container) {
 /* Carga productos desde /api/products y los renderiza */
 async function cargarProductos() {
   try {
-    const res = await fetch("/api/products"); // si tu servidor está en el mismo host/puerto
+    const res = await fetch(`${window.location.origin}/api/products`); // si tu servidor está en el mismo host/puerto
     if (!res.ok) throw new Error("Error al pedir productos: " + res.status);
     const productos = await res.json();
 
