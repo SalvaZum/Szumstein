@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 
-const GEMINI_API_KEY = "AIzaSyDFkI7FGeLLsQAnRvYGBqrkanVFgyKb_cw";
+const GEMINI_KEY = "AIzaSyDFkI7FGeLLsQAnRvYGBqrkanVFgyKb_cw";
 
 // Array de productos de la dietética
 const productos = [
@@ -43,7 +43,7 @@ app.post("/api/ask", async (req, res) => {
 
   try {
     const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}`,
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_KEY}`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
