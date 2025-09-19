@@ -14,6 +14,12 @@
             <li><a href="#portafolio">PORTFOLIO</a></li>
             <li><a href="#contacto">CONTACTO</a></li>
         </ul>
+        <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox" id="cambio">
+                    <span class="slider"></span>
+                </label>
+        </div>
 
         <!-- Ícono hamburguesa para móvil -->
         <div class="hamburger" id="hamburger">
@@ -31,48 +37,7 @@
         <a href="#contacto">CONTACTO</a>
     </div>
     <script>
-        const hamburger = document.getElementById('hamburger');
-        const overlay = document.getElementById('mobileMenu');
-        const closeBtn = document.getElementById('closeBtn');
-
-        hamburger.addEventListener('click', () => {
-            overlay.classList.add('show');
-        });
-
-        closeBtn.addEventListener('click', () => {
-            overlay.classList.remove('show');
-        });
-
-        overlay.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                overlay.classList.remove('show');
-            });
-        }); 
-        // Selecciona todos los enlaces internos del menú
-        document.querySelectorAll('a[href^="#"]').forEach(link => {
-        link.addEventListener('click', e => {
-            e.preventDefault(); // Evita el salto automático
-
-            const targetId = link.getAttribute('href').substring(1); // Quita el #
-            const targetElem = document.getElementById(targetId);
-
-            if (targetElem) {
-                // Scroll suave hasta la posición menos 60px
-                const offset = 60;
-                const topPos = targetElem.getBoundingClientRect().top + window.scrollY - offset;
-
-                window.scrollTo({
-                    top: topPos,
-                    behavior: 'smooth'
-                });
-
-            // Cierra overlay si está abierto (para móvil)
-            if (overlay.classList.contains('show')) {
-                overlay.classList.remove('show');
-            }
-            }
-        });
-    });
+   
     </script>
 
 
@@ -128,7 +93,9 @@
         <div class="decorative-line"></div>
         <div class="info">
             <p>Soy un desarrollador web apasionado por crear sitios web modernos, responsivos e innovadores. Me especializo en HTML, CSS y JavaScript. Mi objetivo es que cada pagina sea un mundo distinto, y que represente a la marca en su más pura expresión.</p>
-            <img src="https://picsum.photos/300/200?random=1" alt="">
+            <div class="container-img">
+                <img src="salvadorPortada.jpg" alt="">
+            </div>
         </div>
         <div class="listas">
             <div>
@@ -168,5 +135,7 @@
         <p style="margin-bottom: -10px;">© 2025 - Diseñado con 🤍</p>
         <p>Contacto: <a href="mailto:szumstein8@gmail.com">szumstein8@gmail.com</a></p>
     </footer>
+
+    <script src="java.js"></script>
 </body>
 </html>

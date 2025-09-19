@@ -1,13 +1,23 @@
 :root{
-    --azulNoSaturado: rgba(15, 15, 39, 1); /* color de fondo */
-    --azul: rgb(29, 35, 73);
-    --blanco: rgb(233, 233, 240);
-    --transparente: rgba(255, 255, 255, 0.363);
-    --naranja: orange;
-    --naranjaClaro: rgb(255, 215, 83);
-    --naranjaOscuro: orangered;
+  --azulNoSaturado: rgba(15, 15, 39, 1); 
+  --azul: rgb(29, 35, 73);
+  --blanco: rgb(233, 233, 240);
+  --transparente: rgba(255, 255, 255, 0.363);
+  --sombra: orange;
+  --sombraClara: rgb(255, 222, 112);
+  --sombraOscura: rgb(148, 39, 0);
 }   
+.tema-claro {
+  --azulNoSaturado: rgb(215, 215, 221);
+  --azul: rgb(255, 255, 255);
+  --blanco: black;
+  --transparente: rgba(255, 255, 255, 0.363);
+  --sombra: rgb(38, 38, 255);
+  --sombraClara: rgb(104, 151, 255);
+  --sombraOscura: rgb(0, 0, 46);
+}
 body{
+  font-family: sans-serif;
   color: var(--blanco);
   background-color: var(--azulNoSaturado);
 
@@ -32,7 +42,7 @@ nav {
 nav h4 {
   margin: 10px;
   font-size: 1.2rem;
-  color: var(--naranjaClaro);
+  color: var(--sombraClara);
 }
 nav ul {
   display: flex;
@@ -40,6 +50,7 @@ nav ul {
   list-style: none;
   margin: 10px;
   padding: 0;
+  align-items: center;
 }
 nav ul li a {
   text-decoration: none;
@@ -99,10 +110,10 @@ nav ul li a {
     }
 }
 a{
-  color: white;
+  color: var(--sombraOscura);
 }
 a:hover {
-  color: var(--naranjaOscuro);
+  color: var(--sombraOscura);
 }
 section{
   margin-bottom: 100px;
@@ -114,18 +125,17 @@ section{
 button {
   margin: 10px;
   padding: 10px;
-  color: white;
 
   border: 3px solid transparent;
   border-radius: 20px;
 
   background: 
-    linear-gradient(var(--azul), var(--transparente)) padding-box, 
-    linear-gradient( 270deg, var(--azul), var(--transparente), var(--azul), var(--transparente) ) border-box;
+    linear-gradient(var(--sombraClara), var(--azulNoSaturado)) padding-box, 
+    linear-gradient( 270deg, var(--sombraClara), var(--sombra), var(--sombraClara), var(--sombra) ) border-box;
   background-size: 300% 300%; 
   animation: moverDegrade 2s linear infinite; 
 
-  box-shadow: 0 0 5px 1px var(--transparente);
+  box-shadow: 0 0 5px 1px var(--sombraClara);
   }
 @keyframes moverDegrade {
   0%   { background-position: 0% 50%; }
@@ -144,7 +154,7 @@ h2{
   font-weight: 800;
 }
 .resaltado{
-    color: var(--naranja);
+    color: var(--sombraClara);
 }
 .pequeño{
   font-size: 15px;
@@ -166,7 +176,7 @@ h2{
   padding: 20px;
 
   background: 
-    linear-gradient(180deg,rgba(0,0,0,0.5), rgba(15, 15, 39, 1)), 
+    linear-gradient(180deg,rgba(139, 139, 139, 0.205), var(--azulNoSaturado)), 
     url("https://kodigowebstorage.blob.core.windows.net/kodigowebsite/2023/07/experiencia-programacion-persona-que-trabaja-codigos-computadora-scaled-1.jpg") no-repeat center center;
   background-size: cover;
 }
@@ -196,8 +206,8 @@ h2{
   transition: 0.5s;
 
   box-shadow: 
-    0 0 12px var(--naranja),
-    0 0 12px var(--naranjaOscuro);
+    0 0 12px var(--sombra),
+    0 0 12px var(--sombraOscura);
 }
 .carousel-track img:hover{
   width: 320px;
@@ -211,8 +221,8 @@ h2{
   transition: 0.5s;
 
   box-shadow: 
-    0 0 12px var(--naranja),
-    0 0 12px var(--naranjaOscuro);
+    0 0 12px var(--sombra),
+    0 0 12px var(--sombraOscura);
 }
 .img:hover{
   width: 320px;
@@ -227,7 +237,7 @@ h2{
   width: 20%;
   height: 2px;
 
-  background:  linear-gradient(270deg, var(--naranjaClaro), var(--naranjaOscuro));
+  background:  linear-gradient(270deg, var(--sombraClara), var(--sombraOscura));
   background-size: 800% 800%;
   animation: moverFondo 5s ease infinite;
 }
@@ -252,8 +262,8 @@ div p{
 .formulario{
   width: 80%;
   padding: 25px;
-  box-shadow: 0px 0px 5px 2px var(--azul);
-  border: 2px var(--transparente) dashed;
+  box-shadow: 0px 0px 5px 2px var(--sombraClara);
+  border: 2px var(--sombraClara) dashed;
 }
 form{
   display: flex;
@@ -267,13 +277,13 @@ input, textarea{
   padding: 10px;
   color: white;
 
-  border: 1px var(--transparente) solid;
+  border: 1px var(--sombraClara) solid;
   border-radius: 10px;
   background-color: transparent;
 
 }
 input::placeholder, textarea::placeholder{
-  color: var(--transparente);
+  color: var(--sombraClara);
 }
 .nosotros{
   width: 80%;
@@ -289,35 +299,44 @@ input::placeholder, textarea::placeholder{
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
 
   margin: 20px;
 }
 .info p{
   margin-right: 20px;
+  width: 70%;
 }
-.nosotros div img{
-  width: 200px;
-  height: 200px;
+.container-img{
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
   border-radius: 100%;
- 
-  box-shadow: 0px 0px 20px 10px var(--azul);
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 0px 10px 5px var(--sombra);
+}
+.container-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .listas{
   display: flex;
 }
 .listas div{
   width: 300px;
-  border: var(--transparente) 2px solid;
+  border: var(--transparente) 3px solid;
   border-radius: 10px;
   margin: 10px 30px 0px 30px;
   padding: 10px;
 
   transition: 0.5s;
-  box-shadow: 0px 0px 20px 10px var(--azul);
+  box-shadow: 0px 0px 10px 5px var(--sombraClara);
 
   background: 
     linear-gradient(var(--azul), var(--azul)) padding-box, 
-    linear-gradient( 270deg, white, var(--azul), white, var(--azul) ) border-box;
+    linear-gradient(270deg, var(--sombraClara), var(--sombraOscura), var(--sombraClara), var(--sombraOscura) ) border-box;
   background-size: 400% 400%; 
   animation: moverDegrade 1.5s linear infinite; 
 }
@@ -326,7 +345,7 @@ input::placeholder, textarea::placeholder{
   transition: 0.5s;
 }
 footer{
-    background: linear-gradient(var(--azulNoSaturado), var(--azul));
+    background: linear-gradient(var(--azulNoSaturado), var(--sombraClara));
     width: 100%;
     height: 200px;
 }   
@@ -336,11 +355,6 @@ footer{
   }
   .listas div{
     margin-top: 50px;
-  }
-  .nosotros div img{
-    width: 200px;
-    height: 200px;
-    margin-right: 0px;
   }
   .nosotros{
     width: 100%;
@@ -354,4 +368,53 @@ footer{
     margin-right: 0px;
     margin-left: 0px;
   }
+}
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 20px;
+}
+.theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--blanco);
+  transition: .4s;
+  border-radius: 34px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--sombraOscura);
+  transition: .4s;
+  border-radius: 50%;
+}
+input:checked + .slider {
+  background-color: var(--sombra);
+}
+input:checked + .slider:before {
+  transform: translateX(26px);
+  }
+.theme-label {
+  font-weight: bold;
+  color: var(--sombraClara);
 }
