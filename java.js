@@ -32,7 +32,7 @@
         }
 
 
-             const hamburger = document.getElementById('hamburger');
+        const hamburger = document.getElementById('hamburger');
         const overlay = document.getElementById('mobileMenu');
         const closeBtn = document.getElementById('closeBtn');
 
