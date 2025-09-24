@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="navbar"></div>
+        
+    <section id="nosotros" class="nosotros fade-in">
+        <h2>Sobre mi</h2>
+        <div class="decorative-line"></div>
+        <div class="info">
+            <p>Soy un desarrollador web apasionado por crear sitios web modernos, responsivos e innovadores. Me especializo en HTML, CSS y JavaScript. Mi objetivo es que cada pagina sea un mundo distinto, y que represente a la marca en su más pura expresión.</p>
+            <div class="container-img fade-in">
+                <img src="imagenes/salvadorPortada.jpg" alt="">
+            </div>
+        </div>
+        <div class="listas">
+            <div class="fade-in">
+                <h3>Habilidades</h3>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Git & Github</li>
+                    <li>Diseño UI</li>
+                </ul>
+            </div>
+            <div class="fade-in">
+                <h3>Educación</h3>
+                <ul>
+                    <li>Bachillerato en Informatica (en curso)</li>
+                    <li>Autoformación constante en lenguajes de programación</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <script type="module">
+      import { cargarNavbar } from './java.js';
+      cargarNavbar();
+    </script>
+    <script src="java.js"></script>
+</body>
+</html>

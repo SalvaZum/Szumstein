@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root{
+            --azulNoSaturado: rgba(15, 15, 39, 1); 
+            --azul: rgb(29, 35, 73);
+            --blanco: rgb(233, 233, 240);
+            --transparente: rgba(255, 255, 255, 0.363);
+            --sombra: orange;
+            --sombraClara: rgb(255, 222, 112);
+            --sombraOscura: rgb(148, 39, 0);
+        }   
+        .tema-claro {
+            --azulNoSaturado: rgb(150, 150, 150);
+            --azul: rgb(212, 212, 212);
+            --blanco: black;
+            --transparente: rgba(255, 255, 255, 0.363);
+            --sombra: rgb(38, 38, 255);
+            --sombraClara: rgb(104, 151, 255);
+            --sombraOscura: rgb(0, 0, 46);
+        }
+        body{
+            background: linear-gradient(var(--azul), var(--azulNoSaturado));
+        }
+        .principal h2{
+            margin-left: 10px;
+        }
+        #paginas{
+            display: flex;
+            flex-flow: wrap;
+            align-items: center;
+            justify-content: center;
+
+            margin-top: 50px;
+        }
+        .contenedor{
+            width: 46%;
+            padding: 10px;
+            margin: 10px;
+            outline: 2px dashed var(--sombraClara);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            transition: 0.4s;
+        }
+        .contenedor:hover{
+            box-shadow: 0px 0px 10px 3px var(--sombra);
+            transform: translateY(-15px);
+            transition: 0.4s;
+        }
+        @media(max-width:768px){
+            #paginas div{
+                width: 90%;
+            }
+        }   
+    </style>
+</head>
+<body>
+    <div id="navbar"></div>
+
+    <section class="principal">
+        <h2>Quienes confiaron en nosotros 💪</h2>
+        <div class="decorative-line" style="margin-left: 10px;"></div>
+        <div id="paginas"></div>
+    </section>
+
+    <h3>Todos mis trabajos</h3>
+    <div class="decorative-line" style="margin-top: -15px;"></div>
+    <section id="carrusel" class="carousel-track fade-in">
+    </section>
+
+    <script type="module">
+      import { cargarNavbar } from './java.js';
+      cargarNavbar();
+    </script>
+    <script src="java.js"></script>
+    <script src="paginas.js"></script>
+</body>
+</html>

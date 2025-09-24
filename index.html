@@ -5,144 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+      *{
+        margin: 0;
+      }
+      .titulo{
+        font-size: 80px;
+        font-weight: 800;
+        margin-bottom: 10px;
+      }
+      .pequeñisimo{
+        font-size: 30px;
+      }
+       #cambiar-texto {
+        border-right: 2px solid #fff; /* el cursor */
+        white-space: nowrap;
+        overflow: hidden;
+        display: inline-block;
+        animation: blink 0.7s infinite; /* parpadeo */
+        }       
+        p{
+          font-size: 15px;
+        }
+        footer{
+          display: flex;
+          justify-content: center;
+        }
+        @keyframes blink {
+          0%, 50% { border-color: #fff; }
+          50%, 100% { border-color: transparent; }
+        } 
+        
+    </style>
 </head>
 <body>
-    <nav>
-        <h4>Salvador Zumstein</h4>
-        <ul class="nav-links">
-            <li><a href="#nosotros">SOBRE MÍ</a></li>
-            <li><a href="#portafolio">PORTFOLIO</a></li>
-            <li><a href="#contacto">CONTACTO</a></li>
-        </ul>
-        <div class="theme-switch-wrapper">
-                <label class="theme-switch">
-                    <input type="checkbox" id="cambio">
-                    <span class="slider"></span>
-                </label>
-        </div>
+    <div id="navbar"></div>
 
-        <!-- Ícono hamburguesa para móvil -->
-        <div class="hamburger" id="hamburger">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </nav>
-
-    <!-- Overlay menú móvil -->
-    <div class="overlay" id="mobileMenu">
-        <span class="close-btn" id="closeBtn">&times;</span>
-        <a href="#nosotros">SOBRE MÍ</a>
-        <a href="#portafolio">PORTFOLIO</a>
-        <a href="#contacto">CONTACTO</a>
-    </div>
-
-    <section id="portafolio" class="carrusel fade-in">
-      <div class="header">
-        <h1 class="titulo">S <span class="pequeñisimo">Zumstein</span></h1>
-        <div class="decorative-line"></div>
-        <h3 class="resaltado" style="text-shadow: 1px 1px 3px black;">Desarrollador web</h3>
-      </div>  
-      <div class="carousel-track">
-        <div>
-            <a href="https://vida-natural.vercel.app"><img src="imagenes/vidaNaturalPortada.png" alt=""></a>
-            <h4>Vida Natural <span class="pequeño">(pagina de demostración)</span></h4>
-            <div class="decorative-line"></div>
-            <p>A manos de la dietetica "Vida Natural" les presentamos esta pagina innovadora con catalogo incluido, soporte tecnico con IA y mucho más.</p>
-        </div>
-        <div>
-            <a href="https://power-gym-nu.vercel.app"><img src="imagenes/powerGymPortada.png" alt=""></a>
-            <h4>PowerGym <span class="pequeño">(pagina de demostración)</span></h4>
-            <div class="decorative-line"></div>
-            <p>El gimnasio "PowerGym" les muestra su pagina que incluye una seccion de imagenes, formulario de contacto y más.</p>
-        </div>
-        <div>
-            <a href="https://pollos-hermanos-delta.vercel.app"><img src="imagenes/pollosHermanos.png" alt=""></a>
-            <h4>Pollos Hermanos</h4>
-            <div class="decorative-line"></div>
-            <p>El emprendimiento de los Pollos Hermanos no solo vende pollos de la mejor calidad a travez del boca en boca, sino que su gran pagina tambien te invita a probar de su cocina</p>
-        </div>
-        <div>
-            <a href="https://sentio-web.vercel.app"><img src="imagenes/sentioPortada.png" alt=""></a>
-            <h4>Sentio</h4>
-            <div class="decorative-line"></div>
-            <p>Ademas de un producto innovador, Sentio, presenta su pagina web con todas sus animaciones, y funciones.</p>
-        </div>
-        <!-- Repetimos para que el efecto se vea continuo -->
-          <div>
-            <a href="https://vida-natural.vercel.app"><img src="imagenes/vidaNaturalPortada.png" alt=""></a>
-            <h4>Vida Natural <span class="pequeño">(pagina de demostración)</span></h4>
-            <div class="decorative-line"></div>
-            <p>A manos de la dietetica "Vida Natural" les presentamos esta pagina innovadora con catalogo incluido, soporte tecnico con IA y mucho más.</p>
-        </div>
-        <div>
-            <a href="https://power-gym-nu.vercel.app"><img src="imagenes/powerGymPortada.png" alt=""></a>
-            <h4>PowerGym <span class="pequeño">(pagina de demostración)</span></h4>
-            <div class="decorative-line"></div>
-            <p>El gimnasio "PowerGym" les muestra su pagina que incluye una seccion de imagenes, formulario de contacto y más.</p>
-        </div>
-        <div>
-            <a href="https://pollos-hermanos-delta.vercel.app"><img src="imagenes/pollosHermanos.png" alt=""></a>
-            <h4>Pollos Hermanos</h4>
-            <div class="decorative-line"></div>
-            <p>El emprendimiento de los Pollos Hermanos no solo vende pollos de la mejor calidad a travez del boca en boca, sino que su gran pagina tambien te invita a probar de su cocina</p>
-        </div>
-        <div>
-            <a href="https://sentio-web.vercel.app"><img src="imagenes/sentioPortada.png" alt=""></a>
-            <h4>Sentio</h4>
-            <div class="decorative-line"></div>
-            <p>Ademas de un producto innovador, Sentio, presenta su pagina web con todas sus animaciones, y funciones.</p>
-        </div>
+    <section id="portafolio" class="header fade-in" > 
+      <h1 class="titulo resaltado">S <span class="pequeñisimo">Zumstein</span></h1>
+      <div class="decorative-line"></div>
+      <h3 id="cambiar-texto" class="resaltado fade" style="text-shadow: 1px 1px 3px black;"></h3>
     </section>
-
-    <section id="nosotros" class="nosotros fade-in">
-        <h2>Sobre mi</h2>
-        <div class="decorative-line"></div>
-        <div class="info">
-            <p>Soy un desarrollador web apasionado por crear sitios web modernos, responsivos e innovadores. Me especializo en HTML, CSS y JavaScript. Mi objetivo es que cada pagina sea un mundo distinto, y que represente a la marca en su más pura expresión.</p>
-            <div class="container-img fade-in">
-                <img src="imagenes/salvadorPortada.jpg" alt="">
-            </div>
-        </div>
-        <div class="listas">
-            <div class="fade-in">
-                <h3>Habilidades</h3>
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>Git & Github</li>
-                    <li>Diseño UI</li>
-                </ul>
-            </div>
-            <div class="fade-in">
-                <h3>Educación</h3>
-                <ul>
-                    <li>Bachillerato en Informatica (en curso)</li>
-                    <li>Autoformación constante en lenguajes de programación</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="contacto" class="contacto fade-in">
-        <div class="formulario fade-in">
-            <h2>¡Rompe el hielo🧊👇!</h2>
-            <p>Envianos un mail a <a href="mailto:szumstein8@gmail.com" class="resaltado">szumstein8@gmail.com</a> o mensaje al <a href="https://wa.me/5493513998998" class="resaltado">351 399 8998</a> para contactarnos para cualquier consulta y/o trabajo que tengas</p>
-            <form action="https://formsubmit.co/szumstein8@gmail.com" method="POST">
-                <input name="nombre" type="text" placeholder="Nombre Completo" required>
-                <input name="email" type="email" placeholder="Mail" required>
-                <textarea name="mensaje" placeholder="Mensaje" id="mensaje" required></textarea>
-                <button type="submit">Enviar a szumstein8@gmail.com</button>
-            </form> 
-        </div>
-    </section>
-
-    <footer class="fade-in" style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
-        <p style="margin-bottom: -10px;">© 2025 - Diseñado con 🤍</p>
-        <p>Contacto: <a href="mailto:szumstein8@gmail.com">szumstein8@gmail.com</a></p>
+    
+    <!--Footer-->
+    <footer>
+      <p class="fade-in">© 2025 - Diseñado con 🤍 | Contacto: <a href="mailto:szumstein8@gmail.com">szumstein8@gmail.com</a></p>
     </footer>
 
+    <!-- Animacion de texto: tipeado -->
+    <script>
+        const palabras = ["Desarrollador web", "Diseñador UI", "Desarollador de videojuegos"];
+        const texto = document.getElementById("cambiar-texto");
+
+        let i = 0; // índice de palabra
+        let j = 0; // índice de letra
+        let borrando = false;
+
+        function type() {
+          let palabra = palabras[i];
+
+          if (!borrando) {
+            // escribir
+            texto.textContent = palabra.slice(0, j++);
+            texto.style.width = j + "ch"; // cursor se mueve
+            if (j > palabra.length) {
+              borrando = true;
+              setTimeout(type, 1000); // pausa antes de borrar
+              return;
+            }
+          } else {
+            // borrar
+            texto.textContent = palabra.slice(0, j--);
+            texto.style.width = j + "ch"; // cursor se mueve
+            if (j < 0) {
+              borrando = false;
+              i = (i + 1) % palabras.length; // siguiente palabra
+              j = 0; // reiniciar índice de letras
+            }
+          }
+
+          setTimeout(type, borrando ? 100 : 150);
+        }
+
+        type();
+    </script>
+
+    <script type="module">
+      import { cargarNavbar } from './java.js';
+      cargarNavbar();
+    </script>
     <script src="java.js"></script>
 </body>
 </html>

@@ -6,6 +6,12 @@
   --sombra: orange;
   --sombraClara: rgb(255, 222, 112);
   --sombraOscura: rgb(148, 39, 0);
+
+  --a: rgba(255, 200, 100, 0.6);
+  --b: rgba(100, 255, 200, 0.6); 
+  --c: rgba(200, 100, 255, 0.6); 
+  --d: rgba(255, 100, 150, 0.6); 
+  --e: rgba(100, 150, 255, 0.6);
 }   
 .tema-claro {
   --azulNoSaturado: rgb(215, 215, 221);
@@ -15,6 +21,15 @@
   --sombra: rgb(38, 38, 255);
   --sombraClara: rgb(104, 151, 255);
   --sombraOscura: rgb(0, 0, 46);
+
+  --a: rgba(255, 200, 100, 1);
+  --b: rgba(100, 255, 200, 1); 
+  --c: rgba(200, 100, 255, 1); 
+  --d: rgba(255, 100, 150, 1); 
+  --e: rgba(100, 150, 255, 1);
+}
+*{
+  box-sizing: border-box;
 }
 body{
   font-family: sans-serif;
@@ -25,6 +40,15 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+/* Barra de naveacion */
+#navbar{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: baseline;
+  align-items: baseline;
 }
 nav {
   width: 100%;
@@ -115,14 +139,11 @@ a{
   color: var(--sombraOscura);
 }
 a:hover {
-  color: var(--sombraOscura);
+  color: var(--sombraClara);
 }
 section{
   margin-bottom: 100px;
-}
-.titulo{
-  font-size: 50px;
-  font-weight: 800;
+  margin-top: 100px;
 }
 button {
   margin: 10px;
@@ -138,7 +159,7 @@ button {
   animation: moverDegrade 2s linear infinite; 
 
   box-shadow: 0 0 5px 1px var(--sombraClara);
-  }
+}
 button:hover{
     color: var(--naranja);
     cursor: pointer;
@@ -152,32 +173,44 @@ h2{
   font-weight: 800;
 }
 .resaltado{
-    color: var(--sombraClara);
+  animation: cambiarColor 5s linear infinite;
 }
 .pequeño{
   font-size: 15px;
   font-weight: 600;
 }
-.pequeñisimo{
-  font-size: 20px;
+.decorative-line{
+  margin-top: -25px;
+  width: 40%;
+  height: 2px;
+
+  background:  linear-gradient(270deg, var(--sombraClara), var(--sombraOscura));
+  background-size: 800% 800%;
+  animation: moverFondo 5s ease infinite;
 }
 .header{
   display: flex;
   flex-direction: column;
   align-items: end;
-  margin: 0px 20px 0px 0px;
-}
-.carrusel {
+  margin: 0;
+  
+
   overflow: hidden;
   width: 100%;
+  height: 500px;
   margin-top: 60px;
   padding: 20px;
 
   background: 
-    linear-gradient(180deg,rgba(139, 139, 139, 0.205), var(--azulNoSaturado)), 
+    linear-gradient(180deg,rgba(139, 139, 139, 0.205), var(--azulNoSaturado) 90%), 
     url("https://kodigowebstorage.blob.core.windows.net/kodigowebsite/2023/07/experiencia-programacion-persona-que-trabaja-codigos-computadora-scaled-1.jpg") no-repeat center center;
   background-size: cover;
 }
+footer{
+    background-color: var(--azulNoSaturado);
+    width: 100%;
+    height: 200px;
+}   
 .carousel-track {
   display: flex;
   width: calc(300px * 8); /* ancho = ancho imagen * cantidad */
@@ -226,15 +259,6 @@ h2{
   width: 320px;
   height: 220px;
 } 
-.decorative-line{
-  margin-top: -25px;
-  width: 20%;
-  height: 2px;
-
-  background:  linear-gradient(270deg, var(--sombraClara), var(--sombraOscura));
-  background-size: 800% 800%;
-  animation: moverFondo 5s ease infinite;
-}
 h4{
   font-size: 24px;
   margin-bottom: -15px;
@@ -333,11 +357,6 @@ input::placeholder, textarea::placeholder{
   transform: translateY(-10px);
   transition: 0.5s;
 }
-footer{
-    background: linear-gradient(var(--azulNoSaturado), var(--sombraClara));
-    width: 100%;
-    height: 200px;
-}   
 .theme-switch-wrapper {
   display: flex;
   align-items: center;
@@ -387,6 +406,27 @@ input:checked + .slider:before {
   font-weight: bold;
   color: var(--sombraClara);
 }
+.background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* detrás de todo */
+}
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.6;
+    animation: float 25s infinite ease-in-out;
+}
+.shape-1 { width: 200px; height: 200px; top: 10%; left: 5%; background: var(--a); animation-delay: 0s; }
+.shape-2 { width: 300px; height: 300px; top: 50%; left: 70%; background: var(--b); animation-delay: -5s; }
+.shape-3 { width: 150px; height: 150px; top: 70%; left: 20%; background: var(--c); animation-delay: -10s; }
+.shape-4 { width: 250px; height: 250px; top: 30%; left: 80%; background: var(--d); animation-delay: -7s; }
+.shape-5 { width: 180px; height: 180px; top: 60%; left: 50%; background: var(--e); animation-delay: -3s; }
+
 @media(max-width:768px){
   .listas{
     flex-direction: column;
@@ -410,7 +450,11 @@ input:checked + .slider:before {
   nav h4{
     margin-left: 10px;
   }
+  nav{
+    justify-content: unset;
+  }
   nav .hamburger{
+    margin-left: 40%;
     margin-right: 10px;
   }
 }
@@ -435,4 +479,14 @@ input:checked + .slider:before {
 @keyframes moverDegrade {
   0%   { background-position: 0% 50%; }
   100% { background-position: 100% 50%; }
+}
+@keyframes cambiarColor {
+  0%   { color: var(--sombra); }
+  50% { color: var(--sombraClara); }
+  100%   { color: var(--sombra); }
+}
+@keyframes float {
+  0%   { transform: translateY(0) translateX(0) scale(1); }
+  50%  { transform: translateY(-80px) translateX(40px) scale(1.1); }
+  100% { transform: translateY(0) translateX(0) scale(1); }
 }
