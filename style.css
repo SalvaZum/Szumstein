@@ -1,4 +1,6 @@
 :root{
+  --celeste: rgb(78, 123, 247); 
+  --azulClaro: rgb(72, 72, 179); 
   --azulNoSaturado: rgba(15, 15, 39, 1); 
   --azul: rgb(29, 35, 73);
   --blanco: rgb(233, 233, 240);
@@ -136,10 +138,10 @@ nav ul li a {
     }
 }
 a{
-  color: var(--sombraOscura);
+  color: var(--celeste);
 }
 a:hover {
-  color: var(--sombraClara);
+  color: var(--azulClaro);
 }
 section{
   margin-bottom: 100px;
@@ -151,14 +153,13 @@ button {
 
   border: 3px solid transparent;
   border-radius: 20px;
-
+  color: white;
   background: 
-    linear-gradient(var(--sombraClara), var(--azulNoSaturado)) padding-box, 
-    linear-gradient( 270deg, var(--sombraClara), var(--sombra), var(--sombraClara), var(--sombra) ) border-box;
+    linear-gradient(var(--azul), var(--azul)) padding-box, 
+    linear-gradient( 270deg, var(--azulClaro), var(--celeste), var(--azulClaro), var(--celeste) ) border-box;
   background-size: 300% 300%; 
   animation: moverDegrade 2s linear infinite; 
 
-  box-shadow: 0 0 5px 1px var(--sombraClara);
 }
 button:hover{
     color: var(--naranja);
@@ -185,12 +186,12 @@ h2{
   width: 40%;
   height: 2px;
 
-  background:  linear-gradient(270deg, var(--sombraClara), var(--sombraOscura));
+  background:  linear-gradient(270deg, var(--azulClaro), var(--azul));
   background-size: 800% 800%;
   animation: moverFondo 5s ease infinite;
 }
 .over:hover{
-  filter: drop-shadow( 0px 0px 10px var(--sombra));
+  filter: drop-shadow( 0px 0px 10px var(--celeste));
   transform: translateY(-15px);
   transition: 0.4s;
 }
@@ -221,11 +222,11 @@ footer{
   display: flex;
   width: calc(300px * 8); /* ancho = ancho imagen * cantidad */
   animation: scroll 20s linear infinite;
+
 }
 .carousel-track div{
   margin: 20px 40px;
   width: 100%;
-
   display: flex;
   flex-direction: column;
   justify-content: baseline;
@@ -241,10 +242,6 @@ footer{
   object-fit: cover;
   border-radius: 10px;
   transition: 0.5s;
-
-  box-shadow: 
-    0 0 12px var(--sombra),
-    0 0 12px var(--sombraOscura);
 }
 .carousel-track img:hover{
   width: 320px;
@@ -281,8 +278,8 @@ div p{
 .formulario{
   width: 80%;
   padding: 25px;
-  box-shadow: 0px 0px 5px 2px var(--sombraClara);
-  border: 2px var(--sombraClara) dashed;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 4px var(--azulNoSaturado);
 }
 form{
   display: flex;
@@ -296,13 +293,13 @@ input, textarea{
   padding: 10px;
   color: white;
 
-  border: 1px var(--sombraClara) solid;
+  border: 1px var(--celeste) solid;
   border-radius: 10px;
   background-color: transparent;
 
 }
 input::placeholder, textarea::placeholder{
-  color: var(--sombraClara);
+  color: var(--celeste);
 }
 .nosotros{
   width: 80%;
@@ -324,16 +321,14 @@ input::placeholder, textarea::placeholder{
 }
 .info p{
   margin-right: 20px;
-  width: 70%;
 }
 .container-img{
-  width: 300px;
-  height: 300px;
+  width: 70%;
+  height: auto;
   margin: 0 auto;
-  border-radius: 100%;
   overflow: hidden;
   position: relative;
-  box-shadow: 0px 0px 10px 5px var(--sombra);
+  border-radius: 20px;
 }
 .container-img img{
   width: 100%;
@@ -342,26 +337,29 @@ input::placeholder, textarea::placeholder{
 }
 .listas{
   display: flex;
+  background-color: var(--azul);
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 10px;
 }
 .listas div{
-  width: 300px;
-  border: var(--transparente) 3px solid;
-  border-radius: 10px;
-  margin: 10px 30px 0px 30px;
-  padding: 10px;
-
-  transition: 0.5s;
-  box-shadow: 0px 0px 10px 5px var(--sombraClara);
-
-  background: 
-    linear-gradient(var(--azul), var(--azul)) padding-box, 
-    linear-gradient(270deg, var(--sombraClara), var(--sombraOscura), var(--sombraClara), var(--sombraOscura) ) border-box;
-  background-size: 400% 400%; 
-  animation: moverDegrade 1.5s linear infinite; 
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px;
+  justify-content: center;
+  align-items: center;
 }
-.listas div:hover{
-  transform: translateY(-10px);
-  transition: 0.5s;
+.listas div div{
+  width: 120px;
+  margin: 0;
+  padding: 0;
+  height: auto;
+  display: flex;
+  flex-direction: column;
 }
 .theme-switch-wrapper {
   display: flex;
@@ -436,9 +434,10 @@ input:checked + .slider:before {
 @media(max-width:768px){
   .listas{
     flex-direction: column;
+    width: 90%;
   }
   .listas div{
-    margin-top: 50px;
+    width: 100%;
   }
   .nosotros{
     width: 100%;

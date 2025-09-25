@@ -32,49 +32,35 @@
     <div id="navbar"></div>
         
     <section id="nosotros" class="nosotros fade-in">
-        <h2>Sobre mi</h2>
-        <div class="decorative-line"></div>
+       
         <div class="info">
-            <p><span class="resaltado">Soy un programador y diseñador apasionado por crear.</span> Me especializo en HTML, CSS y JavaScript. Mi objetivo es que cada producto sea un mundo distinto, y que represente a la marca en su más pura expresión.</p>
-            <div class="container-img fade-in">
+            <div>
+                <h2>Sobre mi</h2>
+                <div class="decorative-line" style="margin-bottom: 20px;"></div>
+                <p><span class="resaltado">Soy un programador y diseñador apasionado por crear.</span></p>
+                <p> Me especializo en HTML, CSS y JavaScript. Mi objetivo es que cada producto sea un mundo distinto, y que represente a la marca en su más pura expresión.</p>
+            </div>
+            <div class="container-img fade-in over">
                 <img src="imagenes/salvadorPortada.jpg" alt="">
             </div>
         </div>
         <div class="listas">
-            <div class="fade-in">
-                <h3>Habilidades</h3>
-                <ul style="list-style: square;">
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>Git & Github</li>
-                    <li>Figma</li>
-                    <li>Gdevelop</li>
-                    <li>Piskel</li>
-                </ul>
-            </div>
-            <div class="fade-in">
-                <h3>Educación</h3>
-                <ul style="list-style: square;">
-                    <li>Bachillerato en Informatica (en curso)</li>
-                    <li>Autoformación constante en lenguajes de programación</li>
-                </ul>
-            </div>
-        </div>
-        <div id="logos">
-            <ul class="example-2" id="icon-list"></ul>
+            <h3>Habilidades</h3>
+            <div id="listas"></div>
         </div>
     </section>
 
     <script>
-        const apps = [{img:"imagenes/html.png", nombre:"html"},{img:"imagenes/css.png", nombre:"css"},{img:"imagenes/js.png", nombre:"java script"},{img:"imagenes/figma.jpg", nombre:"figma"},{img:"imagenes/github.png", nombre:"github"},{img:"imagenes/gdevelop.jpeg", nombre:"gdevelop"}, {img:"imagenes/piskel.png", nombre:"piskel"}]
-        const contenedor = document.getElementById('logos')
+        const apps = [{img:"imagenes/html.png", nombre:"html"},{img:"imagenes/css.png", nombre:"css"},{img:"imagenes/js.png", nombre:"java script"},{img:"imagenes/figma.jpg", nombre:"figma"},{img:"imagenes/github.png", nombre:"github"},{img:"imagenes/gdevelop.jpeg", nombre:"gdevelop"}, {img:"imagenes/piskel.png", nombre:"piskel"}, {img:"imagenes/supabase.jpeg", nombre:"supabase"}]
+        const contenedor = document.getElementById('listas')
         apps.forEach(app => {
             const div = document.createElement('div')
             div.innerHTML=`
+             <div>
                 <img src="${app.img}" alt="" class="over" style="width: 70px; height: auto; border-radius: 20px; transition: 0.4s;">
-                <p class="resaltado">${app.nombre}</p>
-            `
+                <p class="resaltado" style="font-size:14px; margin-top:5px;">${app.nombre}</p>
+             </div>
+               `
             contenedor.appendChild(div)
         });
     </script>

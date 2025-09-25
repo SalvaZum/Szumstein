@@ -42,7 +42,7 @@
             width: 46%;
             padding: 10px;
             margin: 10px;
-            outline: 2px dashed var(--sombraClara);
+             box-shadow: 0px 0px 10px 3px var(--azulNoSaturado);
             border-radius: 10px;
             display: flex;
             flex-direction: column;
@@ -52,7 +52,6 @@
             transition: 0.4s;
         }
         .contenedor:hover{
-            box-shadow: 0px 0px 10px 3px var(--sombra);
             transform: translateY(-15px);
             transition: 0.4s;
         }
@@ -67,15 +66,14 @@
     <div id="navbar"></div>
 
     <section class="principal">
-        <h2>Quienes confiaron en nosotros 💪</h2>
+        <h2>Quienes confiaron en nosotros</h2>
         <div class="decorative-line" style="margin-left: 10px;"></div>
         <div id="paginas"></div>
     </section>
 
-    <h3>Todos mis trabajos</h3>
+    <h2>Proyectos</h2>
     <div class="decorative-line" style="margin-top: -15px; margin-bottom: -50px;"></div>
-    <section id="carrusel" class="carousel-track fade-in">
-    </section>
+    <section id="carrusel" class="carousel-track fade-in"></section>
 
     <script type="module">
       import { cargarNavbar } from './java.js';
