@@ -31,8 +31,7 @@
 <body>
     <div id="navbar"></div>
         
-    <section id="nosotros" class="nosotros fade-in">
-       
+    <section id="nosotros" class="nosotros fade-in">    
         <div class="info">
             <div>
                 <h2>Sobre mi</h2>
@@ -45,21 +44,38 @@
             </div>
         </div>
         <div class="listas">
-            <h3>Habilidades</h3>
+            <h3>Educacion</h3>
+            <div id="educacion"></div>
+
+            <h3 style="margin-top: 50px;">Habilidades</h3>
             <div id="listas"></div>
         </div>
     </section>
 
     <script>
+        //Eduacion
+        const educacion = [{institucion:"Centro Educativo Santo Domingo", direccion:"Gral. Alvear 270, Córdoba, Argentina", descripcion:"Bachillerato en informatica - cursando"}, {institucion:"IICANA", direccion:"Vera y Zárate 3031, Córdoba, Argentina", descripcion:"Academia de ingles - cursando"}]
+        const container = document.getElementById('educacion')
+        educacion.forEach(edu =>{
+            const div = document.createElement('div')
+            div.classList.add('over')
+            div.innerHTML=`
+                <h3>${edu.institucion}</h3>
+                <h6>${edu.direccion}</h6>
+                <p>${edu.descripcion}</p>
+            `
+            container.appendChild(div)
+        })
+
+        //Habilidades
         const apps = [{img:"imagenes/html.png", nombre:"html"},{img:"imagenes/css.png", nombre:"css"},{img:"imagenes/js.png", nombre:"java script"},{img:"imagenes/figma.jpg", nombre:"figma"},{img:"imagenes/github.png", nombre:"github"},{img:"imagenes/gdevelop.jpeg", nombre:"gdevelop"}, {img:"imagenes/piskel.png", nombre:"piskel"}, {img:"imagenes/supabase.jpeg", nombre:"supabase"}]
         const contenedor = document.getElementById('listas')
         apps.forEach(app => {
             const div = document.createElement('div')
+            div.classList.add('logo')
             div.innerHTML=`
-             <div>
                 <img src="${app.img}" alt="" class="over" style="width: 70px; height: auto; border-radius: 20px; transition: 0.4s;">
                 <p class="resaltado" style="font-size:14px; margin-top:5px;">${app.nombre}</p>
-             </div>
                `
             contenedor.appendChild(div)
         });
