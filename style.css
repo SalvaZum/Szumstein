@@ -347,7 +347,7 @@ input::placeholder, textarea::placeholder{
   border-radius: 10px;
 }
 #listas{
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   padding: 30px;
@@ -367,7 +367,7 @@ input::placeholder, textarea::placeholder{
   margin: 0px 20px 0px 20px;
   width: 50%;
 }
-.logo{
+#listas div{
   width: 120px;
   margin: 0;
   padding: 0;
@@ -482,6 +482,11 @@ input:checked + .slider:before {
   #educacion div{
     margin: 20px;
     width: 90%;
+  }
+  #listas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 .fade-in {
