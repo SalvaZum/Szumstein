@@ -22,6 +22,12 @@ const paginas = [
     img:"imagenes/powerGymPortada.png", 
     nombre:`PowerGym <span class="pequeño">(pagina de demostración)</span>`, 
     descripcion:"El gimnasio 'PowerGym' les muestra su pagina que incluye una seccion de imagenes, formulario de contacto y más."
+    },
+    {
+    url:"https://cookies-cba.vercel.app", 
+    img:"imagenes/CookiesCBA.png", 
+    nombre:`Cookies CBA <span class="pequeño">(pagina de demostración)</span>`, 
+    descripcion:"De aquí no solo provienen las mejores galletas, sino tambien su pagina demuestra la calidad y excelencia que maneja este emprendimiento"
     }]
 
 //Principal
