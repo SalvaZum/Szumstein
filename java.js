@@ -22,7 +22,7 @@ export function cargarNavbar() {
                 overlay.classList.remove('show');
             });
         });
-
+                
         const themeToggle = document.getElementById('cambio');
         const body = document.body;
 

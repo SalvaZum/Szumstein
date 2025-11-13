@@ -176,7 +176,7 @@ h2{
 }
 .resaltado{
   font-weight: 800;
-  animation: cambiarColor 5s linear infinite;
+  animation: cambiarColor 10s linear infinite;
 }
 .pequeño{
   font-size: 15px;
@@ -199,14 +199,14 @@ h2{
 .header{
   display: flex;
   flex-direction: column;
-  align-items: end;
+  align-items: center;
+  justify-content: center;
   margin: 0;
   
 
   overflow: hidden;
   width: 100%;
   height: 500px;
-  margin-top: 70px;
   padding: 20px;
 
   background: 
