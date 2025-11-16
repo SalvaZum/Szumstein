@@ -221,8 +221,8 @@ footer{
 }   
 .carousel-track {
   display: flex;
-  width: calc(300px * 8); /* ancho = ancho imagen * cantidad */
-  animation: scroll 20s linear infinite;
+  width: calc(800px * 10); /* ancho = ancho imagen * cantidad */
+  animation: scroll 40s linear infinite;
 
 }
 .carousel-track div{

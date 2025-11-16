@@ -26,9 +26,11 @@
         }
         body{
             background: linear-gradient(var(--azul), var(--azulNoSaturado));
+            
         }
-        .principal h2{
-            margin-left: 10px;
+        .subtitulo{
+            text-align: center; 
+            font-weight: 800;
         }
         #paginas{
             display: flex;
@@ -39,10 +41,10 @@
             margin-top: 50px;
         }
         .contenedor{
-            width: 46%;
+            width: 90%;
             padding: 10px;
             margin: 10px;
-             box-shadow: 0px 0px 10px 3px var(--azulNoSaturado);
+            box-shadow: 0px 0px 10px 3px var(--azulNoSaturado);
             border-radius: 10px;
             display: flex;
             flex-direction: column;
@@ -55,9 +57,62 @@
             transform: translateY(-15px);
             transition: 0.4s;
         }
-        @media(max-width:768px){
+        .categoria{
+            border:1px solid #306fc2ff; padding: 5px 10px; border-radius: 15px; font-size: 14px; 
+        }
+        #proyectos{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+
+            margin-top: 50px;
+        }
+        h2{
+            font-size: 20px;
+            font-weight: 800;
+        }
+        .contenedor-proyectos{
+            display: flex;
+            flex-direction: row;
+        }
+        .contenedor-laboral{
+            display: flex; 
+            flex-direction: row; 
+            justify-content: center; 
+            gap: 20px;
+        }
+         @media(max-width:768px){
             #paginas div{
                 width: 90%;
+            }
+            .subtitulo{
+                font-size: 25px;
+            }
+            h1{
+                font-size:25px;
+            }
+            #proyectos{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                margin-top: 50px;
+                width: 100%;
+            }
+            #proyectos .contenedor{
+                width: 100%;
+            }
+            .contenedor-laboral{
+                display: flex; 
+                flex-direction: column; 
+                justify-content: center; 
+                gap: 20px;
+            }
+            .contenedor-proyectos{
+                display: flex;
+                flex-direction: column;
             }
         }   
     </style>
@@ -66,15 +121,15 @@
     <div id="navbar"></div>
 
     <section class="principal">
-        <h2>Quienes confiaron en nosotros</h2>
-        <div class="decorative-line" style="margin-left: 10px;"></div>
+        <h1 class="subtitulo">Formaciòn laboral</h1>
         <div id="paginas"></div>
     </section>
 
-    <h2>Proyectos</h2>
-    <div class="decorative-line" style="margin-top: -15px; margin-bottom: -50px;"></div>
-    <section id="carrusel" class="carousel-track fade-in"></section>
-
+    <section style="margin:0; margin-bottom:100px;">
+        <h1 class="subtitulo">Proyectos Personales/Competencias</h1>
+        <div id="proyectos"></div>
+    </section>
+    
     <script type="module">
       import { cargarNavbar } from './java.js';
       cargarNavbar();
