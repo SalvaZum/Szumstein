@@ -26,7 +26,7 @@ const formacionLaboral = [
     herramientas: ["HTML", "CSS", "JavaScript"],
     descripcion: "El emprendimiento de los Pollos Hermanos no solo vende pollos de la mejor calidad a travez del boca en boca, sino que su gran pagina tambien te invita a probar de su cocina"
     },
-    ]
+]
 const proyectos=[
     {
     url:"https://sentio-web.vercel.app", 
@@ -123,7 +123,7 @@ formacionLaboral.forEach(pagina => {
                   ${pagina.imgs.length > 1 ? `
                 <div class="progress-container" style="width:100%; height:4px; background:#ddd; border-radius:2px; overflow:hidden; margin-top:5px;">
                     <div class="progress-bar" id="progress-${pagina.nombre.replace(/\s+/g,'-')}" style="width:0%; height:100%; background:#306fc2ff; transition: width 0.1s linear;"></div>
-                </div> ` : "" }
+                </div> ` : '' }
             </div> ` : '' }
             
             <div style="width: 100%; order: 2;">
@@ -258,7 +258,7 @@ proyectos.forEach(pagina => {
         const fps = 20;
 
         function esVideo(ruta) {
-            return ruta.endsWith(".mp4") || ruta.endsWith(".webm") || ruta.endsWith(".ogg");
+            return ruta.endsWith(".mp4")
         }
 
         function mostrarMedia() {
@@ -278,6 +278,8 @@ proyectos.forEach(pagina => {
                 elemento.style.width = "100%";
                 elemento.style.display = "block";
                 elemento.style.borderRadius = "10px";
+                elemento.playsInline = true;         
+                elemento.controls = false;            
             } else {
                 elemento = document.createElement("img");
                 elemento.src = ruta;
