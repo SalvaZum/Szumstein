@@ -55,7 +55,7 @@ const proyectos=[
     },
     {
     url:"", 
-    imgs:["imagenes/proyectos/techCamp.png"], 
+    imgs:["imagenes/proyectos/techCamp.jpg"], 
     nombre:`TechCampUCC`, 
     categoria: "trabajo en equipo",
     año:"2024",
