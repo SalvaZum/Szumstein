@@ -39,7 +39,7 @@ const proyectos=[
     }, 
     {
     url:"https://gd.games/games/6b14b45a-be6f-4124-b0a5-0add0d879d77", 
-    imgs:["imagenes/proyectos/oneDayVideogame(1).png","imagenes/proyectos/oneDayVideogame(2).png","imagenes/proyectos/oneDayVideogame(3).png"],
+    imgs:["imagenes/proyectos/oneDayVideogame(1).png","imagenes/proyectos/oneDayVideogame(2).png","imagenes/proyectos/oneDayVideogame(3).png", "imagenes/proyectos/oniet2025.jpg"],
     nombre:`One Day Videogame`, 
     categoria: "desarrollo videojuego",
     año:"2025",

@@ -52,9 +52,17 @@
         </div>
     </section>
 
+    <div id="imageViewer" class="image-viewer">
+        <div class="image-viewer-content">
+            <span class="image-viewer-close">&times;</span>
+            <img id="imageViewerImg" src="" alt="">
+        </div>
+    </div>
+
+
     <script>
         //Eduacion
-        const educacion = [{institucion:"Centro Educativo Santo Domingo", direccion:"Gral. Alvear 270, Córdoba, Argentina", descripcion:"Bachillerato en informatica - cursando"}, {institucion:"IICANA", direccion:"Vera y Zárate 3031, Córdoba, Argentina", descripcion:"Academia de ingles - cursando"}]
+        const educacion = [{institucion:"Centro Educativo Santo Domingo", direccion:"📍 Gral. Alvear 270, Córdoba, Argentina", descripcion:"Bachillerato en informatica", img:"imagenes/proyectos/secundario.jpg"}, {institucion:"IICANA", direccion:"📍 Vera y Zárate 3031, Córdoba, Argentina", descripcion:"Academia de ingles - cursando", img:""}]
         const container = document.getElementById('educacion')
         educacion.forEach(edu =>{
             const div = document.createElement('div')
@@ -63,6 +71,11 @@
                 <h3>${edu.institucion}</h3>
                 <h6>${edu.direccion}</h6>
                 <p>${edu.descripcion}</p>
+
+                ${edu.img ? ` 
+                <button class="ver-imagen" data-img="${edu.img}">
+                    Ver Certificado
+                </button>` : ""}
             `
             container.appendChild(div)
         })
@@ -79,6 +92,37 @@
                `
             contenedor.appendChild(div)
         });
+        const viewer = document.getElementById("imageViewer");
+const viewerImg = document.getElementById("imageViewerImg");
+const viewerClose = document.querySelector(".image-viewer-close");
+
+// Abrir
+document.addEventListener("click", (e) => {
+  const btn = e.target.closest(".ver-imagen");
+  if (!btn) return;
+
+  viewerImg.src = btn.dataset.img;
+  viewer.style.display = "flex";
+  document.body.style.overflow = "hidden";
+});
+
+// Cerrar
+viewerClose.addEventListener("click", () => {
+  viewer.style.display = "none";
+  viewerImg.src = "";
+  document.body.style.overflow = "";
+});
+
+// Cerrar clickeando fondo
+viewer.addEventListener("click", () => {
+  viewer.style.display = "none";
+  viewerImg.src = "";
+  document.body.style.overflow = "";
+});
+
+// Evitar cierre al clickear imagen
+viewerImg.addEventListener("click", (e) => e.stopPropagation());
+
     </script>
 
     <script type="module">
@@ -86,5 +130,6 @@
       cargarNavbar();
     </script>
     <script src="java.js"></script>
+  
 </body>
 </html>
