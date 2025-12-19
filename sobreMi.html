@@ -62,7 +62,7 @@
 
     <script>
         //Eduacion
-        const educacion = [{institucion:"Centro Educativo Santo Domingo", direccion:"📍 Gral. Alvear 270, Córdoba, Argentina", descripcion:"Bachillerato en informatica", img:"imagenes/proyectos/secundario.jpg"}, {institucion:"IICANA", direccion:"📍 Vera y Zárate 3031, Córdoba, Argentina", descripcion:"Academia de ingles - cursando", img:""}]
+        const educacion = [{institucion:"Centro Educativo Santo Domingo", direccion:"📍 Gral. Alvear 270, Córdoba, Argentina", descripcion:"Bachillerato en informatica"}, {institucion:"IICANA", direccion:"📍 Vera y Zárate 3031, Córdoba, Argentina", descripcion:"Academia de ingles - cursando"}]
         const container = document.getElementById('educacion')
         educacion.forEach(edu =>{
             const div = document.createElement('div')
@@ -71,11 +71,6 @@
                 <h3>${edu.institucion}</h3>
                 <h6>${edu.direccion}</h6>
                 <p>${edu.descripcion}</p>
-
-                ${edu.img ? ` 
-                <button class="ver-imagen" data-img="${edu.img}">
-                    Ver Certificado
-                </button>` : ""}
             `
             container.appendChild(div)
         })
