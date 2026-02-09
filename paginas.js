@@ -9,6 +9,15 @@ const formacionLaboral = [
     descripcion:"Ademas de ser una pagina web excelente, cuenta con un sistema para agendar turnos y un apartado para el personal donde gestionan los mismos"
     },
     {
+    url:"https://ali-tech-pro.vercel.app", 
+    imgs:["imagenes/proyectos/alitech.png","imagenes/proyectos/alitech(2).png","imagenes/proyectos/alitech(3).png"],  
+    nombre:`Alitech Pro`, 
+    categoria:"pagina web",
+    año:"2026",
+    herramientas: ["HTML", "CSS", "JavaScript", "Firebase", "NodeMailer"],
+    descripcion:"Landing page con base de datos para guardar reseñas. NodeMailer para enviar mails mediante el formulario de la web. Firebase Auth para iniciar sesion e ingresar a la page de admin para administrar las reseñas"
+    },
+    {
     url:"", 
     imgs:[], 
     nombre:`Pasantia en Claro`, 

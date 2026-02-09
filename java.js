@@ -22,25 +22,8 @@ export function cargarNavbar() {
                 overlay.classList.remove('show');
             });
         });
-                
-        const themeToggle = document.getElementById('cambio');
+            
         const body = document.body;
-
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'claro') {
-            body.classList.add('tema-claro');
-            themeToggle.checked = true;
-        }
-
-        themeToggle.addEventListener('change', function() {
-            if (this.checked) {
-                body.classList.add('tema-claro');
-                localStorage.setItem('theme', 'claro');
-            } else {
-                body.classList.remove('tema-claro');
-                localStorage.setItem('theme', 'oscuro');
-            }
-        });
 
         // Scroll suave
         document.querySelectorAll('a[href^="#"]').forEach(link => {
