@@ -26,15 +26,6 @@ const formacionLaboral = [
     herramientas: ["Firebase Studio"],
     descripcion:"En la pasantia de Claro, ademas de seguir el programa que ellos tenian planificado para este tiempo donde aprendimos sobre habilidades blandas como ventas, autodesarrollo, autoliderazgo, etc. Tambien desarrollamos un programa entre todos los pasantes el cual tenia como objetivo reemplazar un sistema viejo que utilizaban los empleados de esta empresa que servia par llevar el registro de los productos que cada empleado sacaba del almacen."
     },
-    {
-    url:"https://pollos-hermanos-delta.vercel.app", 
-    imgs:["imagenes/proyectos/pollosHermanos.png","imagenes/proyectos/pollosHermanos(1).png","imagenes/proyectos/pollosHermanos(2).png"], 
-    nombre:"Pollos Hermanos", 
-    categoria: "pagina web",
-    año:"2025",
-    herramientas: ["HTML", "CSS", "JavaScript"],
-    descripcion: "El emprendimiento de los Pollos Hermanos no solo vende pollos de la mejor calidad a travez del boca en boca, sino que su gran pagina tambien te invita a probar de su cocina"
-    },
 ]
 const proyectos=[
     {
