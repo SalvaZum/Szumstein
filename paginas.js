@@ -1,5 +1,14 @@
 const formacionLaboral = [
     {
+    url:"https://swnegociosinmobiliarios.com.ar", 
+    imgs:["imagenes/proyectos/swInmo.png","imagenes/proyectos/swInmo2.png","imagenes/proyectos/swInmo3.png"],  
+    nombre:`Santellan & Weidmann Inmobiliaria`, 
+    categoria:"pagina web",
+    año:"2026",
+    herramientas: ["HTML", "CSS", "JavaScript", "Bootstrap", "Firebase", "Leaflet", "Web3Form", "Cloudinary"],
+     descripcion:"Sitio web desarrollado para una inmobiliaria, con catálogo dinámico de propiedades, integración de mapas interactivos mediante Leaflet, sistema de contacto optimizado con Web3Forms y almacenamiento de imágenes en la nube con Cloudinary. Diseñado para ofrecer una experiencia intuitiva y profesional tanto para clientes como para administradores."
+    },
+    {
     url:"https://centromedico2206.vercel.app", 
     imgs:["imagenes/proyectos/centroMedico.png","imagenes/proyectos/centroMedico(1).png","imagenes/proyectos/centroMedico(2).png","imagenes/proyectos/centroMedico(3).png"],  
     nombre:`Centro Medico`, 
