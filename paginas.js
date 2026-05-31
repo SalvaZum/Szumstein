@@ -6,7 +6,16 @@ const formacionLaboral = [
     categoria:"pagina web",
     año:"2026",
     herramientas: ["HTML", "CSS", "JavaScript", "Bootstrap", "Firebase", "Leaflet", "Web3Form", "Cloudinary"],
-     descripcion:"Sitio web desarrollado para una inmobiliaria, con catálogo dinámico de propiedades, integración de mapas interactivos mediante Leaflet, sistema de contacto optimizado con Web3Forms y almacenamiento de imágenes en la nube con Cloudinary. Diseñado para ofrecer una experiencia intuitiva y profesional tanto para clientes como para administradores."
+    descripcion:"Sitio web desarrollado para una inmobiliaria, con catálogo dinámico de propiedades, integración de mapas interactivos mediante Leaflet, sistema de contacto optimizado con Web3Forms y almacenamiento de imágenes en la nube con Cloudinary. Diseñado para ofrecer una experiencia intuitiva y profesional tanto para clientes como para administradores."
+    },
+    {
+    url:"https://dra-zito.vercel.app", 
+    imgs:["imagenes/proyectos/zito.png", "imagenes/proyectos/zito2.png", "imagenes/proyectos/zito3.png", "imagenes/proyectos/zito4.png",],  
+    nombre:`Dra. Claudia Zito`, 
+    categoria:"pagina web",
+    año:"2026",
+    herramientas: ["HTML", "CSS", "JavaScript", "Bootstrap", "Firebase", "Mercado Pago Checkout Pro"],
+    descripcion:"Landing page desarrollada para una profesional de la salud, diseñada para presentar sus servicios de forma clara y generar confianza en los pacientes. Incluye un panel de administración personalizado que le permite gestionar y actualizar el contenido del sitio de manera autónoma, sin necesidad de conocimientos técnicos."
     },
     {
     url:"https://centromedico2206.vercel.app", 
